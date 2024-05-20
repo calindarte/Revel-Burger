@@ -1,12 +1,18 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const UseOrderContext = createContext();
 
+const inicialState = JSON.parse(localStorage.getItem("order")) || [];
+
+
 export default function UseOrderContextProvider ({children}) {
  
-    const [orderProduct, setOrderProduct] = useState([]);
+    const [orderProduct, setOrderProduct] = useState(inicialState);
 
-   
+    useEffect(() => {
+      localStorage.setItem("order", JSON.stringify(orderProduct));
+  
+    }, [orderProduct]);
 
       const addOrderProduct = (product) => {
         // Verifica si el producto ya está en el carrito
@@ -25,6 +31,9 @@ export default function UseOrderContextProvider ({children}) {
           // Agrega el producto al carrito si no está presente
           setOrderProduct((prevCart) => [...prevCart, product]);
         }
+        localStorage.setItem("order", JSON.stringify(orderProduct));
+        // Devuelve true si se agregó correctamente
+        return true;
        
       };
     

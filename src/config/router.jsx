@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import LayoutPublic from "../layout/LayoutPublic";
 import Home from "../pages/Home";
 import OrderDetails from "../pages/OrderDetails";
+import OrderConfirm from "../pages/OrderConfirm";
+import LayoutOrder from "../layout/LayoutOrder";
 
 export const router = createBrowserRouter([
     {
@@ -14,8 +16,20 @@ export const router = createBrowserRouter([
             },
             {
                 path:"/order",
-                element:<OrderDetails/>,
+                element:<LayoutOrder/>,
+                children:[
+                {
+                    index:true,
+                    element:<OrderDetails/>,
+                },
+                {
+                    path:"/order/confirm",
+                    element:<OrderConfirm/>,
+                },
+
+                ]
             },
+            
         ]
     }
 ])

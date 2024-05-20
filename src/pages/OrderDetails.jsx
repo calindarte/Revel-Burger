@@ -1,22 +1,13 @@
-// import { useParams } from "react-router-dom";
-// import { useData } from "../hooks/useData";
-// import { useEffect } from "react";
+
 
 import { Link } from "react-router-dom";
 import Price from "../components/Price";
 import { useOrderContext } from "../context/UseOrderContext";
 
 const ProductDetails = () => {
-  // const {id} = useParams();
-  // const {data,getByNameProduct} = useData()
+
   const { orderProduct, deleteOrderProduct, calculateTotalPrice } =
     useOrderContext();
-
-  // const name = id.toLocaleLowerCase()
-
-  // useEffect(()=>{
-  // getByNameProduct(name)
-  // },[name])
 
   return (
     <div className="relative">
@@ -72,11 +63,13 @@ const ProductDetails = () => {
             </div>
 
             <div className="flex flex-col gap-4">
+              <Link to="/order/confirm">
               <button className="bg-zinc-900 hover:bg-zinc-700 text-white rounded-md py-4 w-full">
                 Confirmar Pedido
               </button>
+              </Link>
               <Link to="/">
-                <button className="bg-zinc-900  hover:bg-zinc-700 text-white rounded-md py-4 w-full flex justify-center">
+                <button className="bg-zinc-900  hover:bg-zinc-700 text-white rounded-md py-4 w-full flex justify-center gap-1">
                   <span className="material-symbols-outlined ">arrow_back</span>
                   Volver al Menú
                 </button>
