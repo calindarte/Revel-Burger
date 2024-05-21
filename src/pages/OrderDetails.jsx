@@ -32,8 +32,8 @@ const ProductDetails = () => {
       )}
       <div className="mt-4">
         {orderProduct.map((product) => (
-          <article key={product.id} className="flex items-center md:mx-20 mx-10 py-4">
-            <div className="flex gap-8">
+          <article key={product.id} className="flex items-center md:mx-20 mx-10 py-4 text-sm md:text-base">
+            <div className="flex md:gap-8 gap-4">
               <span>{product.quantity}</span>X
               <h6 className="uppercase">{product.name}</h6>
               <button

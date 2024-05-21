@@ -43,7 +43,7 @@ const CardBurger = ({ name, description, price, image, product }) => {
       </div>
 
       <div className="text-zinc-950 flex flex-col gap-2 py-4 ">
-        <h1 className="font-bold uppercase text-lg">{name}</h1>
+        <h1 className="font-bold uppercase md:text-lg">{name}</h1>
         <p>{description}</p>
         <span>
                 <Price precio={price} className="font-bold" />

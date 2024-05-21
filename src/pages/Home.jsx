@@ -43,12 +43,12 @@ const Home = () => {
       </div>
 
       <div className="mx-10 bg-slate-50 text-white flex flex-col gap-1">
-        <p className="py-4 font-bold uppercase bg-zinc-950 rounded-md flex justify-center gap-2 ">
-          <span className="material-symbols-outlined text-amber-500 ">
+        <p className="py-4 text-xs md:text-base items-center font-bold uppercase bg-zinc-950 rounded-md flex justify-center gap-2 ">
+          <span className="material-symbols-outlined text-amber-500 text-lg ">
             star
           </span>
           <span>Burgers</span>
-          <span className="material-symbols-outlined text-amber-500">star</span>
+          <span className="material-symbols-outlined text-amber-500 text-lg">star</span>
         </p>
 
         {data.map((item) => (
@@ -67,13 +67,13 @@ const Home = () => {
       <div className="mx-10 my-4 bg-slate-50 text-white flex flex-col gap-1">
         <button
           onClick={() => setOpenAdditional(!openAdditional)}
-          className="py-4 font-bold uppercase bg-zinc-950 rounded-md hover:bg-zinc-900 flex justify-center gap-2 "
+          className="py-4 text-xs md:text-base font-bold uppercase bg-zinc-950 rounded-md hover:bg-zinc-900 flex justify-center items-center gap-2 "
         >
-          <span className="material-symbols-outlined text-amber-500 ">
+          <span className="material-symbols-outlined text-amber-500 text-lg ">
             star
           </span>
           <span>Adicionales</span>
-          <span className="material-symbols-outlined text-amber-500">star</span>
+          <span className="material-symbols-outlined text-amber-500 text-lg">star</span>
           <span className="material-symbols-outlined">keyboard_arrow_down</span>
         </button>
         {openAdditional &&
@@ -93,13 +93,13 @@ const Home = () => {
       <div className="mx-10 my-4 bg-slate-50 text-white flex flex-col gap-1">
         <button
           onClick={() => setOpenDrinks(!openDrinks)}
-          className="py-4 font-bold uppercase bg-zinc-950 rounded-md hover:bg-zinc-900 flex justify-center gap-2 "
+          className="py-4 font-bold text-xs md:text-base uppercase bg-zinc-950 rounded-md hover:bg-zinc-900 flex justify-center items-center gap-2 "
         >
-          <span className="material-symbols-outlined text-amber-500 ">
+          <span className="material-symbols-outlined text-amber-500 text-lg ">
             star
           </span>
           <span>Bebidas</span>
-          <span className="material-symbols-outlined text-amber-500">star</span>
+          <span className="material-symbols-outlined text-amber-500 text-lg">star</span>
           <span className="material-symbols-outlined">keyboard_arrow_down</span>
         </button>
         {openDrinks &&
@@ -118,15 +118,15 @@ const Home = () => {
 
       {orderProduct.length !== 0 && (
         <Link to={`/order`}>
-          <div className="sticky bottom-2 left-0 right-0 text-white z-10 mx-10 py-4 font-bold uppercase bg-zinc-950 hover:bg-zinc-800 rounded-md flex items-center justify-between  my-4 px-10 ">
+          <div className="sticky text-xs md:text-base bottom-2 left-0 right-0 text-white z-10 mx-10 py-4 font-bold uppercase bg-zinc-950 hover:bg-zinc-800 rounded-md flex items-center justify-between  my-4 px-10 ">
             <div>{totalQuantityProduct}</div>
 
-            <div className="flex gap-2">
-              <span className="material-symbols-outlined text-amber-500 ">
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-amber-500 text-lg ">
                 star
               </span>
               <span>Ver Orden</span>
-              <span className="material-symbols-outlined text-amber-500">
+              <span className="material-symbols-outlined text-amber-500 text-lg">
                 star
               </span>
             </div>
