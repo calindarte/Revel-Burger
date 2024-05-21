@@ -126,6 +126,46 @@ const Products = [
     },
     
   ];
+
+  const Drinks = [
+    {
+        id: 1,
+        name: "Coca-Cola 1.5l",
+        description: "Refrescante bebida carbonatada con sabor a cola.",
+        image: "https://supermercadocomunal.com/39598-large_default/gaseosa-coca-cola-15-lt.jpg",
+        price: 5000,
+    },
+    {
+        id: 2,
+        name: "Jugo de Naranja 2.5l",
+        description: "Jugo de naranja del valle, perfecto para cualquier momento.",
+        image: "https://licoresjunior.com/wp-content/uploads/2023/12/JUGO-NARANJA-DEL-VALLE-25-LTS-1024x1024-1.jpg",
+        price: 5500,
+    },
+    {
+        id: 3,
+        name: "Cerveza Heineken",
+        description: "Cerveza Heineken, sabor único y de alta calidad.",
+        image: "https://bevgo.com.co/wp-content/uploads/2021/03/764.jpg",
+        price: 3800,
+    },
+    {
+        id: 4,
+        name: "Botella de agua",
+        description: "Agua mineral pura y refrescante, ideal para mantenerte hidratado.",
+        image: "https://coopasan.com.co/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUxMzY4NCwicHVyIjoiYmxvYl9pZCJ9fQ==--ee6f0a9e4ce292b68c8dc4b9e2812d3dbd547be6/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fZml0IjpbODAwLDgwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--cef66509c9cdc75663c0eefd9421db1d2ea4fead/ME00047.png?locale=es",
+        price: 1500,
+    },
+    {
+      id: 5,
+      name: "Postobón de Manzana 2.5l",
+      description: "Refrescante gaseosa de manzana con un sabor único.",
+      image: "https://eurosuper.vtexassets.com/arquivos/ids/159862/7702090016406.jpg?v=638237209949330000",
+      price: 5500,
+  },
+    
+];
+
   
 
 export const useData = () => {
@@ -133,6 +173,9 @@ export const useData = () => {
     const [data, setData] = useState(Products)
 
     const [addtional, setAdditional] = useState(AdditionalProducts)
+
+    const [drinks, setDrinks] = useState(Drinks)
+
 
 
     const filteredBurgers = (textInput) => {
@@ -153,7 +196,7 @@ export const useData = () => {
 
 
   return {
-    data, filteredBurgers, getByNameProduct, addtional
+    data, filteredBurgers, getByNameProduct, addtional, drinks
 
   }
 }

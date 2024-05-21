@@ -39,11 +39,17 @@ const OrderRecogerlo = ({ orderProduct, calculateTotalPrice }) => {
       message
     )}`;
     window.open(whatsappUrl, "_blank");
+
+  setName("");
+  setContactNumber("");
+  setPickupTime("");
+  setComment("");
+
   };
 
   return (
     <div>
-      <form className="flex flex-col gap-4 my-4">
+      <form className="flex flex-col gap-4 my-4 ">
         <div className="relative">
           <input
             type="text"

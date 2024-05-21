@@ -41,6 +41,13 @@ const OrderDomicilio = ({orderProduct, calculateTotalPrice}) => {
     const phoneNumber = "3013109339"; // Reemplaza este número con el número de WhatsApp específico
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+
+  setName("");
+  setPhone("");
+  setAddress("");
+  setNeighborhood("");
+  setPaymentMethod("");
+  setComment("");
   };
 
   return (

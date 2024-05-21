@@ -12,7 +12,7 @@ const ProductDetails = () => {
   return (
     <div className="relative">
       <div>
-        <h4 className="font-bold uppercase text-3xl tracking-wider ml-10 my-8 text-zinc-700">
+        <h4 className="font-bold uppercase text-xl md:text-3xl tracking-wider ml-10 my-8 text-zinc-700">
           Detalle de la Orden
         </h4>
       </div>
@@ -32,7 +32,7 @@ const ProductDetails = () => {
       )}
       <div className="mt-4">
         {orderProduct.map((product) => (
-          <article key={product.id} className="flex items-center mx-20 py-4">
+          <article key={product.id} className="flex items-center md:mx-20 mx-10 py-4">
             <div className="flex gap-8">
               <span>{product.quantity}</span>X
               <h6 className="uppercase">{product.name}</h6>
@@ -53,7 +53,7 @@ const ProductDetails = () => {
       <div className="mb-10">
         {orderProduct.length !== 0 && (
           <div className="px-10 py-8 flex flex-col gap-4">
-            <div className="flex justify-between  px-10">
+            <div className="flex justify-between  md:px-10">
               <span className="font-bold text-lg uppercase text-zinc-900 tracking-widest">
                 Subtotal:
               </span>

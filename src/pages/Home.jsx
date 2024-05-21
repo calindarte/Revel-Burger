@@ -8,10 +8,13 @@ import Price from "../components/Price";
 
 const Home = () => {
   const [textInput, setTextInput] = useState("");
-  const { data, filteredBurgers, addtional } = useData();
+  const { data, filteredBurgers, addtional, drinks } = useData();
   const { calculateTotalPrice, orderProduct, totalQuantityProduct } =
     useOrderContext();
+
   const [openAdditional, setOpenAdditional] = useState(false);
+  const [openDrinks, setOpenDrinks] = useState(false);
+
 
   useEffect(() => {
     filteredBurgers(textInput);
@@ -89,7 +92,7 @@ const Home = () => {
       
       <div className="mx-10 my-4 bg-slate-50 text-white flex flex-col gap-1">
         <button
-          onClick={() => setOpenAdditional(!openAdditional)}
+          onClick={() => setOpenDrinks(!openDrinks)}
           className="py-4 font-bold uppercase bg-zinc-950 rounded-md hover:bg-zinc-900 flex justify-center gap-2 "
         >
           <span className="material-symbols-outlined text-amber-500 ">
@@ -99,8 +102,8 @@ const Home = () => {
           <span className="material-symbols-outlined text-amber-500">star</span>
           <span className="material-symbols-outlined">keyboard_arrow_down</span>
         </button>
-        {openAdditional &&
-          addtional.map((item) => (
+        {openDrinks &&
+          drinks.map((item) => (
             <div key={item.id} className="flex flex-col">
               <CardBurger
                 name={item.name}

@@ -37,9 +37,9 @@ const CardBurger = ({ name, description, price, image, product }) => {
 
 
   return (
-    <div className="bg-[#f5f5f5] flex  m-3 rounded-lg gap-16 p-6 shadow-2xl relative">
+    <div className="bg-[#f5f5f5] flex flex-col items-center  md:flex-row  m-3 rounded-lg md:gap-16 gap-4 p-6 shadow-2xl relative">
       <div className=" overflow-hidden rounded-2xl">
-        <img src={image} alt="foto-burger" className="size-40 object-cover" />
+        <img src={image} alt="foto-burger" className="size-40  object-center" />
       </div>
 
       <div className="text-zinc-950 flex flex-col gap-2 py-4 ">
@@ -51,7 +51,7 @@ const CardBurger = ({ name, description, price, image, product }) => {
         <div>
         
 
-        <button onClick={handleAddToCart} className="bg-zinc-900 rounded-full p-2 flex absolute right-12 top-[40%] ">
+        <button onClick={handleAddToCart} className="bg-zinc-900 rounded-full mt-2 md:mt-0 p-2 w-full md:w-auto flex justify-center md:absolute md:right-12 md:top-[40%] ">
           <span className="material-symbols-outlined text-white">add</span>
         </button>
  

@@ -41,6 +41,13 @@ const OrderMesa = ({ orderProduct, calculateTotalPrice }) => {
       message
     )}`;
     window.open(whatsappUrl, "_blank");
+
+
+    setName("");
+    setTableNumber("");
+    setComment("");
+    setPaymentMethod("");
+
   };
 
   return (
