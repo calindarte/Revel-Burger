@@ -4,8 +4,8 @@ import IconArrowDown from "./IconArrowDown";
 
 const Header = () => {
   return (
-    <div>
-      <div className="relative bg-gradient-to-r from-zinc-800 via-zinc-900 to-zinc-950  flex md:flex-row flex-col gap-1 py-16 justify-center ">
+    <div className="relative">
+      <div className=" bg-gradient-to-r from-zinc-800 via-zinc-900 to-zinc-950  flex md:flex-row flex-col gap-1 py-16 justify-center ">
         <div className="flex justify-center">
 
         <img src={imgBurger} alt="burger" className="md:size-96 size-80 object-cover"/>
@@ -22,7 +22,7 @@ const Header = () => {
           </div>
 
       </div>
-      <img src={imgLogo} alt="logo" className="absolute z-20 rounded-full md:size-40  size-24 md:right-20 right-6 md:bottom-5  shadow-2xl" />
+      <img src={imgLogo} alt="logo" className="absolute z-20 rounded-full md:size-40  size-24 md:right-20 right-6 bottom-[8%]  shadow-2xl" />
 
       <div>
         <h1 className="md:text-4xl text-xl uppercase font-bold tracking-wider ml-10 my-8">
